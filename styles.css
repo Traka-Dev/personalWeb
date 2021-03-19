@@ -1,0 +1,14 @@
+header {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color: "#4D4D4D";
+    color: '#00c896'
+}
+
+h1 {
+    color: '#00c896';
+}
