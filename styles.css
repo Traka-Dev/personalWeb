@@ -158,3 +158,16 @@ main {
     height: 80vh;
     flex-direction: column;
 }
+
+.iconos__header {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 28%;
+    margin-top: 5px;
+    margin-left: 28%;
+}
+
+.iconos__header a {
+    font-size: 2rem;
+    color: white;
+}
