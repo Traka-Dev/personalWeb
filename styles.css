@@ -10,6 +10,11 @@
     border-width: 5px;
 }
 
+:root {
+    --def: #96B7C4;
+    --inv: #fff;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -18,12 +23,27 @@
 html,
 body {
     height: 100%;
+    background: #0f2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2c5364, #203a43, #0f2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c5364, #203a43, #0f2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 nav ul {
     display: flex;
     justify-content: space-evenly;
-    height: 5vh;
+    height: 15vh;
+    font-size: 1.4rem;
+    color: white;
+}
+
+li nav ul li:hover {
+    background-color: #364547;
+    font-size: 1.6rem;
+    padding: 5px;
+    border-radius: 10%;
 }
 
 nav ul li {
@@ -36,12 +56,11 @@ nav ul li {
     align-content: center;
     justify-content: center;
     text-align: center;
-    background: #353434;
     color: #00c896;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    height: 95vh;
+    height: 80vh;
 }
 
 header h1 {
@@ -99,4 +118,63 @@ main {
     display: flex;
     height: 90vh;
     flex-direction: column;
+}
+
+.btn {
+    position: relative;
+    padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    font-size: 1.2rem;
+    color: var(--inv);
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: grey;
+    transition-delay: .5s;
+}
+
+.btn:hover:before {
+    transition-delay: 0s;
+}
+
+.btn:hover:after {
+    background: var(--inv);
+    transition-delay: .35s;
+}
+
+.from-right:before,
+.from-right:after {
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+
+.from-right:before {
+    left: 0;
+    border: 1px solid var(--inv);
+    border-left: 0;
+    border-right: 0;
+}
+
+.from-right:after {
+    right: 0;
+    color: grey;
+}
+
+.from-right:hover:before,
+.from-right:hover:after {
+    width: 100%;
 }
