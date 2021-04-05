@@ -181,10 +181,16 @@ main {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
     .nav_mobile {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-align: right;
+    }
+    .nav_mobile h2 {
+        margin-left: 10px;
+        color: white;
     }
     .nav_mobile i {
         padding: 15px;
@@ -193,5 +199,24 @@ main {
     }
     nav {
         display: none;
+    }
+    .container {
+        display: block;
+        overflow: scroll;
+    }
+    .circle {
+        border-radius: 100%;
+        height: 120px;
+        width: 120px;
+        border: 2px solid white;
+    }
+    .skills_container {
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .skills h2 {
+        margin: 10px;
+        font-size: 1rem;
     }
 }

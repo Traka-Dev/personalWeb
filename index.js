@@ -14,7 +14,7 @@ $(document).ready(function() {
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
             nav.style.display = '';
-            content.style.display = 'grid';
+            content.style.display = 'block';
         }
     });
 });
