@@ -137,10 +137,11 @@ header img {
 }
 
 .circle {
-    border-radius: 100%;
     height: 200px;
     width: 200px;
-    border: 2px solid white;
+    border-radius: 50%;
+    background: #213e4b;
+    box-shadow: inset 14px 14px 29px #152830, inset -14px -14px 29px #2d5466;
 }
 
 .about_me_container p {

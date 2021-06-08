@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/dfcb599bc7.js" crossorigin="anonymous"></script>
+    <title>About Me</title>
+</head>
+
+<body>
+    <div class="nav_mobile">
+        <h2>Jorge Luis Jaime S&aacute;nchez</h2>
+        <i id='menu_mobile_icon' class="fas fa-bars"></i>
+    </div>
+    <nav>
+        <div onclick="location.href='/index.html';" class="btn from-right">HOME</div>
+        <div onclick="location.href='/about/index.html';" class="btn from-right">ABOUT ME</div>
+        <div onclick="location.href='/portfolio/index.html';" class="btn from-right">PORTFOLIO</div>
+        <div onclick="location.href='/blog/index.html';" class="btn from-right">BLOG</div>
+        <div onclick="location.href='/contact/contact.html';" class="btn from-right">CONTACT ME</div>
+    </nav>
+    <div class="container">
+        <div class="container_description">
+            <h2>Marketplace / WooCommerce Web Site</h2>
+            <p>
+                This is one of the bigest projects I have done so far, because it needed a lot of custom code in wordpress, I customized alot of plugins, added functions and even made a payment plugin to make the site as the client wished.
+            </p>
+            <p>
+                The client wanted a marketplace for local stores/shops to offer their services and products online with the option to pick them up. The main goal of the web site is to be used by people who is new to online shopping or doesn´t own a credit/debit card
+                so the interfacer was as simpler as possible and payment is mostly offline(direct deposits or cash).
+            </p>
+            <p>
+                The bigest problem in the project was to integrate offline payments becuase every store has their own payment info and then make individual reports, Most ther plugins for ecommerce focus on online payments so there are not a lot of plugins so I had to
+                develope a custom solution and integrated with wordpress/WooCommerce and then transalated all plugins to spanish even admin panel. Then I made a custom admin panel so people that admin the site had limited options so the site couldn't
+                be broken by mistake.
+            </p>
+            <p>
+                I had to modify a lot of existing plugins in order to make add or remove options, for example to make an admin for all vendors to give them support or resolve any issue with the config and editor for some parts of the site like colors or add blocks. What
+                I I like about all the little changes I had to do for this client, I learnt how to interact with wordpress core api.
+            </p>
+            <a class="project_link" href="https://wwww.sinaloamarket.com" target="_blank">SinaloaMarket</a>
+        </div>
+        <div class="container_gallery">
+            <img src="./img/map_app.png" alt="Mobile App Screen Shoot">
+        </div>
+    </div>
+</body>
+<script src="/index.js"></script>
+
+</html>

@@ -99,17 +99,30 @@ nav div {
 /***ENDS MENU***/
 
 .container {
-    align-items: center;
+    align-content: center;
     justify-content: center;
     text-align: center;
     color: #00c896;
-    display: flex;
     height: 80vh;
+    width: 100vw;
+    display: flex;
 }
 
-header h1 {
-    margin-top: -10%;
-    font-size: 3.3rem;
+.container_gallery img {
+    width: 15vw;
+    height: 65vh;
+    margin-top: 20px;
+    min-width: 200px;
+}
+
+.container_description {
+    width: 70vw;
+}
+
+.container_description p {
+    text-align: justify;
+    margin: 20px;
+    padding: 0 10%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -134,19 +147,7 @@ header h1 {
         display: none;
     }
     .container {
+        display: block;
         overflow: scroll;
-    }
-    .container div {
-        display: flex;
-        height: 80vh;
-    }
-    header {
-        align-self: center;
-    }
-    header h1 {
-        margin-top: 0px;
-        text-align: center;
-        font-size: 2.5rem;
-        width: 100vw;
     }
 }
