@@ -68,7 +68,7 @@ function showNotification() {
             Message: mensaje
         }
     }).done(function(data) {
-        console.log(data);
+        console.dir(data);
         document.querySelector('.form-container').reset();
         document.querySelector(".notification").style.display = "flex";
         document.querySelector(".notification").innerHTML = "Message sent.";
@@ -82,6 +82,6 @@ function showNotification() {
         setTimeout(function() {
             document.querySelector(".notification").style.display = "none";
         }, 3000);
-        console.log(data.responseText);
+        console.dir(data);
     });
 }
