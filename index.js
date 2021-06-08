@@ -84,5 +84,4 @@ function showNotification() {
         }, 3000);
         console.log(data.responseText);
     });
-    console.log('fin del ajax');
 }

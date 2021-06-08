@@ -123,6 +123,7 @@ main {
 
 .links li {
     margin: 20px;
+    text-align: left;
 }
 
 .links li a {
