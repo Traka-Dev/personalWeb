@@ -68,20 +68,25 @@ function showNotification() {
             Message: mensaje
         }
     }).done(function(data) {
-        console.dir(data);
-        document.querySelector('.form-container').reset();
-        document.querySelector(".notification").style.display = "flex";
-        document.querySelector(".notification").innerHTML = "Message sent.";
-        setTimeout(function() {
-            document.querySelector(".notification").style.display = "none";
-        }, 3000);
+        if (data.ERROR) {
+            document.querySelector(".notification").style.display = "flex";
+            document.querySelector(".notification").innerHTML = data.ERROR;
+            setTimeout(function() {
+                document.querySelector(".notification").style.display = "none";
+            }, 3000);
+        } else {
+            document.querySelector('.form-container').reset();
+            document.querySelector(".notification").style.display = "flex";
+            document.querySelector(".notification").innerHTML = "Message sent.";
+            setTimeout(function() {
+                document.querySelector(".notification").style.display = "none";
+            }, 3000);
+        }
     }).fail(function(data) {
-        document.querySelector('.form-container').reset();
         document.querySelector(".notification").style.display = "flex";
-        document.querySelector(".notification").innerHTML = "Message sent.";
+        document.querySelector(".notification").innerHTML = "Message was not sent.";
         setTimeout(function() {
             document.querySelector(".notification").style.display = "none";
         }, 3000);
-        console.dir(data);
     });
 }
